@@ -1,0 +1,221 @@
+
+  .navbar-brand .brand-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.navvy{
+    position: sticky;
+}
+.navbar-brand .main-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    
+}
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5px; /* Adjusts spacing as needed */
+}
+
+.navbar-brand .sub-title {
+    font-size: 0.85rem;
+    margin: 0;
+    color: white;
+}
+
+.navbar-nav .nav-link {
+    position: relative; 
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 1.5rem;
+    transition: color 0.3s;
+    vertical-align: middle;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px; 
+    background-color: white; 
+    transition: width 0.3s ease, left 0.3s ease; 
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%; 
+    left: 0; 
+}
+
+/* Active link style */
+.navbar-nav .nav-link.active {
+    color: #ff6500; 
+    border-bottom: 2px solid #ff6500; 
+}
+.btn-custom{
+    background-color: #32314E;
+    color: white;
+}
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+.two{
+    background-color: #cccccc;
+}
+.container-fluid-a{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100%;
+}
+.container-fluid-a::-webkit-scrollbar{
+    display: none;
+}
+.main-t{
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #32314E;
+}
+
+.one {
+    background-image: url('assets/icons/bmw4k.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position: center; 
+    padding-top: 70px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-scrolled{
+    background-color: black;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.services {
+    padding: 50px 20px;
+    text-align: center;
+}
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.service-card {
+    width: 30%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    
+    border-radius: 10px;
+}
+.service-card h5 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.card-img {
+    opacity: 0;
+    filter: blue(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+    display: block;
+}
+.booking {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.booking form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.booking label {
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+.booking input,
+.booking select,
+.booking button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.booking button.cta-button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.booking button.cta-button:hover {
+    background-color: #e55335;
+}
+.three{
+    background-color: #f0f0f0;
+}
+.contact-form{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: whitesmoke;
+}
+.col{
+    align-items: center;
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.img-fluid{
+    max-height: 10vh;
+}
+
+.col-3{
+    background-color: transparent;
+}
+.cards {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+.cards:hover {
+    transform: scale(1.25);
+}
+.card-img-top {
+    object-fit: cover;
+    background: transparent;
+    max-width: 50px;
+}
+
+  /* Reduce padding and font size on smaller screens */
+  @media (max-width: 576px) {
+    .card-body h3 {
+      font-size: 1.25rem;
+    }
+    .card-body p {
+      font-size: 0.9rem;
+      padding: 0.5rem;
+    }
+    .form-title {
+      font-size: 1rem;
+    }
+    .contact-form {
+      padding: 1rem;
+    }
+    section.two .container {
+        padding-top: 80px;
+      }
+  }

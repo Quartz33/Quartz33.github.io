@@ -167,7 +167,7 @@
 .card-img-top {
     object-fit: cover;
     background: transparent;
-    max-width: 50%;
+    max-width: 20%;
 }
 
 .card-img {
@@ -339,4 +339,30 @@
     justify-content: center;
     height: 100%;
     padding-top: 5%;
+}
+
+@keyframes rotate360 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotate-image {
+    animation: rotate360 2s linear infinite;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    bottom: 54px; /* Move the arrows lower on the card */
+    top: auto; /* Override the top positioning */
+    color: black; /* Set arrow color to black */
+  }
+  .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; /* Make the arrows black */
+  background-size: 100%, 100%; /* Ensure arrows fill the icon space */
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
 }
