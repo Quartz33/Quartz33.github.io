@@ -11,7 +11,6 @@
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
-    
 }
 .brand-text {
     display: flex;
@@ -74,15 +73,15 @@ section{
 .container-fluid-a{
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 100vh;
-    width: 100%;
+    background-color: whitesmoke;
+   
 }
 .container-fluid-a::-webkit-scrollbar{
     display: none;
 }
 .main-t{
     color: white;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: #32314E;
 }
 
@@ -90,11 +89,10 @@ section{
     background-image: url('assets/icons/bmw4k.jpg'); 
     background-size: cover; 
     background-repeat: no-repeat;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.24);
     background-position: center; 
     padding-top: 70px;
-    width: 100%;
-    
+    width: 100%;    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,6 +129,12 @@ section{
     transform: translateX(-100%);
     transition: all 1s;
     display: block;
+}
+.hp-title{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 2s;
 }
 .booking {
     padding: 50px 20px;
@@ -219,3 +223,36 @@ section{
         padding-top: 80px;
       }
   }
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .hp-title1 {
+    animation: slideInFromLeft 1s ease-out;
+  }
+  
+  .hp-title2 {
+    animation: slideInFromRight 1s ease-out;
+  }
+
+
+  
